@@ -1,0 +1,68 @@
+\documentclass[doublesided, ctexart]{Style/xauat}
+\usepackage{booktabs}
+\usepackage[left=2.5cm, right=2.5cm, bottom=2cm, top=4.5cm, footskip=1cm, bindingoffset=0.5cm]{geometry}
+\usepackage{amscd,amssymb,amsfonts,amsbsy,amsmath,verbatim,color}
+\usepackage[super,myhdr,list]{Style/commons}% common settings
+\usepackage{Style/custom}% user defined commands
+\captionsetup{labelformat=default,labelsep=quad} %去除冒号
+\renewcommand {\theequation} {\thechapter{}-\arabic{equation}}
+\usepackage{array, caption, threeparttable}
+\captionsetup[table]{singlelinecheck=false}%%%% -------------------------------------------------------------------------------%%%%******************************** Content *****************************************
+\usepackage{chngpage}
+\usepackage{mathrsfs}
+\usepackage{float}
+
+
+\begin{document}
+\bibliographystyle{plain}
+
+%%%%******************************** Frontmatter *************************************
+%% Frontmatter of Title page, Table of contents, Preface chapter.
+\frontmatter
+
+% title page
+\input{Texs/Frontpages}
+
+%abstract, dedication
+\pagenumbering{Roman}
+\input{Texs/Abstract}
+
+
+\pagestyle{fancy}
+\fancyhead{} % 清除所有页眉内容
+
+\fancyhead[C]{\目录}
+\fancyhead[CO]{\leftmark} % 在偶数页C显示当前章的标题
+\fancyhead[CE]{西安建筑科技大学硕士学位论文} % 在奇数页C显示学校
+
+\tableofcontents% contents catalog%目录
+
+\input{Texs/Prematter}%%符号表
+
+%%%%% --------------------------------------------------------------------------------
+%%%%******************************** Mainmatter **************************************
+%% Main topics.
+\mainmatter
+%%% >>> Main Contents%正文
+\input{Texs/Chapter_Introduction.tex}
+\input{Texs/Chapter_Preliminary.tex}
+
+\backmatter
+\input{Texs/References}
+
+%%% >>> Bibliography
+
+\intotoc{\bibname}% add a corresponding item to the contents table and bookmark 参考文献
+%\bibliography{Biblio/tex}%
+
+%%% >>> Other contents
+\input{Texs/Acknowledgements}%%致谢
+\input{Texs/Achievements}%%科研成果
+\end{document}
+
+
+
+
+
+
+

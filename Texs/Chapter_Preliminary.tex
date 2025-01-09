@@ -1,0 +1,108 @@
+\chapter{预备知识}
+
+\section{基本概念}
+
+\begin{definition}\mycite{Howie1995}
+    令$S$为非空集合, $S$上有一个二元运算 $\mu:S\times S \to S$, 并且运算 $\mu$ 满足结合律：$\forall a,b,c \in S$, 满足 $((a,b)\mu, c)\mu = (a, (b, c)\mu)\mu$, 则称集合$S$和二元运算$\mu$为半群。
+\end{definition}
+
+通常为了简便起见，记二元运算$\mu$为乘法，即记$(a,b)\mu$，为$a\cdot b$，或进一步简记为$ab$。
+
+\begin{definition}\mycite{Howie1995}
+    令$S$为半群，$T$为$S$的一个子集，如果$T$关于$S$上的二元运算$\mu$封闭，即 $\forall a,b \in T$, 有$ab\in T$, 则称 $T$ 连同$S$上二元运算$\mu$ 在 $T$ 上的限制称为$S$ 的子半群。
+\end{definition}
+
+\begin{definition}\mycite{Howie1995}
+    令$S$为半群，如果存在元素$1 \in S$, 并且满足$\forall s\in S, 1s=s1=s$ ，则称元素 $1$ 为半群$S$的幺元。
+\end{definition}
+
+\begin{lemma}\mycite{Howie1995}
+    令$S$为半群，如果$S$有幺元，那么它只有一个幺元。
+\end{lemma}
+
+\begin{definition}\mycite{Howie1995}
+    如果半群$S$中含有幺元，则称其为幺半群。
+\end{definition}
+
+\begin{definition}\mycite{Howie1995}
+    令$S$是半群，如果$S$不含幺元，则添加一个幺元$1$，并且任意$s\in S$有 $1s = s1 = s$. 那么$S\cup{1}$是幺半群，记为$S^1$。即$S^1$ 表示如下半群
+    \begin{equation*}
+        S^1=\begin{cases}
+            S & \text{若}S \text{包含幺元} \\
+            S \cup {1} & \text{若}S \text{不含幺元}
+        \end{cases}
+    \end{equation*}
+\end{definition}
+
+\begin{definition}\mycite{Howie1995}
+    令$S$是半群，如果元素$a\in S$，满足 $aa=a$，则称$a$为幂等元。
+\end{definition}
+
+\begin{definition}
+    若半群$S$中的元素都是幂等元，则称半群$S$为带。
+
+    (i) 若对于带$S$中任意两个元素的二元运算都可交换，即 $ab=ba$，则称带$S$为半格。
+\end{definition}
+
+\begin{definition}\mycite{Howie1995}
+    令 $S$ 为半群，$\rho$ 为 $S$ 上的一个二元关系，并且 $S$ 中的元素 $a, b$ 有$\rho$ 关系
+
+    (i) 对于任意 $c \in S$, 有 $ca \rho cb$，则称 $\rho$ 是左相容的；
+
+    (ii) 对于任意 $c \in S$, 有 $ac \rho bc$，则称 $\rho$ 是右相容的；
+
+    (iii) 若$\rho$ 即是左相容的，也是右相容的，则称 $\rho$ 是相容的。
+\end{definition}
+
+\begin{definition}\mycite{Howie1995}
+    令 $S$ 为半群，$\rho$ 为 $S$ 上的一个等价关系。若
+
+    (i) $\rho$ 是左相容的，则称 $\rho$ 是左同余；
+
+    (ii) $\rho$ 是右相容的，则称 $\rho$ 是右同余；
+
+    (iii) $\rho$ 是相容的，则称 $\rho$ 是同余。
+\end{definition}
+
+
+
+
+\section{格林关系与正则半群}
+Green于1965年在半群上定义了格林关系，开启了研究半群的工具。
+\begin{definition}\mycite{Howie1995}
+    令$S$为半群，$a, b$ 为$S$的两个元素。
+
+    (i) 若存在元素$x, y$ 使得 $xa=b$ 并且 $yb=a$，则称$a\mathcal{L}b$。
+
+    (ii) 若存在元素 $x, y$ 使得 $ax=b$ 并且 $by=a$，则称$a\mathcal{R}b$。
+
+    (iii) 若 $a\mathcal{L}b$ 并且 $a\mathcal{R}b$，则称$a\mathcal{H}b$。
+    
+    
+\end{definition}
+\section{广义格林关系与广义正则半群}
+Pastijn在1975年弱化了Green关系的条件，形成了 $\ast$-Green 关系。
+
+\begin{definition}
+    令 $S$ 为半群，$a, b$ 为 $S$ 的两个元素。
+
+    (i) $\mathcal{L}^{\ast} = \{(a,b)\in S\times S| \forall x,y \in S^1 \rightarrow ax=ay \Leftrightarrow bx=by\}$；
+
+    (ii) $\mathcal{R}^{\ast} = \{(a,b)\in S\times S| \forall x,y \in S^1 \rightarrow xa=ya \Leftrightarrow xb=yb\}$；
+
+    (iii) $\mathcal{H}^{\ast} = \mathcal{L}^{\ast} \cap \mathcal{R}^{\ast}$
+\end{definition}
+
+Lawson在1990年进一步弱化了Pastijn提出的 $\ast$-Green关系，形成了$\sim$-Green关系。
+
+\begin{definition}
+    令 $S$ 为半群，$a, b$ 为 $S$ 的两个元素。
+
+    (i) $\tilde{\mathcal{L}} = \{(a,b)\in S\times S| \forall e \in E \rightarrow ae=a \Leftrightarrow be=b\}$；
+
+    (ii) $\tilde{\mathcal{R}} = \{(a,b)\in S\times S| \forall e \in E \rightarrow ea=a \Leftrightarrow eb=b\}$；
+
+    (iii) $\tilde{\mathcal{H}} = \tilde{\mathcal{L}} \cap \tilde{\mathcal{R}}$
+\end{definition}
+
+
