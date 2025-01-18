@@ -67,7 +67,7 @@ git clone https://github.com/Hyapp/XAUATThesisTemplate.git
 恢复了直接引用bib文件的能力，使用 gkt-7714-2015-numerical 中的方案，详见 main.tex 中对文献的引用方式。
 修改命令 \mycite 为 \themcite 更加规范。
 
-## 如何下载并使用新版本
+## 如何使用新版本
 
 1. 下载新模板放入一个新的文件夹中
 
