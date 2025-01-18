@@ -14,7 +14,6 @@
 
 
 \begin{document}
-\bibliographystyle{plain}
 
 %%%%******************************** Frontmatter *************************************
 %% Frontmatter of Title page, Table of contents, Preface chapter.
@@ -35,7 +34,7 @@
 \fancyhead[CO]{\leftmark} % 在偶数页C显示当前章的标题
 \fancyhead[CE]{西安建筑科技大学硕士学位论文} % 在奇数页C显示学校
 
-\tableofcontents% contents catalog%目录
+\tableofcontents % contents catalog%目录
 
 \input{Texs/Prematter}%%符号表
 
@@ -47,13 +46,16 @@
 \input{Texs/Chapter_Introduction.tex}
 \input{Texs/Chapter_Preliminary.tex}
 
+
+%%% >>> Bibliography 参考文献
+% 在定理前引用方式用 \mycite 而不是 \cite！
+% 在正文中引用方式用 \cite 而不是 \mycite！
 \backmatter
-\input{Texs/References}
-
-%%% >>> Bibliography
-
-\intotoc{\bibname}% add a corresponding item to the contents table and bookmark 参考文献
-%\bibliography{Biblio/tex}%
+\intotoc{\bibname}% add a corresponding item to the contents table and bookmark 
+%\input{Texs/References} % 在 Texs/Referebces.tex 中手写参考文献
+\bibliography{Biblio/Bibliography.bib} % 引用 自动生成或手写的 Bibilo/Biblio.bib 中的参考文献
+% Biblio.bib 文件中的条目可以在网站上的引用中选 bib 格式，复制粘贴到 Biblio.bib 中即可。
+% 引用方式见正文
 
 %%% >>> Other contents
 \input{Texs/Acknowledgements}%%致谢

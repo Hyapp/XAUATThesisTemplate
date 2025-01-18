@@ -56,4 +56,12 @@ git clone https://github.com/Hyapp/XAUATThesisTemplate.git
 
 ...
 
+## 更新与版本
+1. 2015-1-8， 20:00
+上传修改后的第一版。
+
+2. 2025-1-18, 10:50
+恢复了直接引用bib文件的能力，使用 gkt-7714-2015-numerical 中的方案，详见 main.tex 中对文献的引用方式。
+修改命令 \mycite 为 \themcite 更加规范。
+
 ## 欢迎大家 Star，有能力的大佬们提 PR 
