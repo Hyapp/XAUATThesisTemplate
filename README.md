@@ -33,7 +33,7 @@ git clone https://github.com/Hyapp/XAUATThesisTemplate.git
 \documentclass[doublesided, adobefonts, ctexart]{Style/xauat}
 ```
 
-<font color=red> Windows 中的字体； 和 adobe系字体是有版权的！请自行安装！！！ </font>
+<font color=red> Windows 中的字体； 和 Adobe系字体是有版权的！请自行安装！！！ </font>
 
 ## 改个人信息
 在 Texs/Frontpages.tex 中更改对应的内容即可
@@ -44,7 +44,7 @@ git clone https://github.com/Hyapp/XAUATThesisTemplate.git
 
 建议将固定的信息加入 xauat.cfg 中，每个用户不同的信息放入 tex 文件中，而不是写死
 
-建议将章节分成单独的文件，在 main.tex 中去掉多余章节的 input 行，在编写时速度快，最后整理与生成目录与引用时，将所有 input 添加进去
+建议将章节分成单独的文件并放入 Texs 文件夹中，在 main.tex 中去掉多余章节的 input 行，在编写时速度快，最后整理与生成目录与引用时，将所有 input 添加进去
 
 ## 已知存在的问题
 
@@ -57,6 +57,7 @@ git clone https://github.com/Hyapp/XAUATThesisTemplate.git
 ...
 
 ## 更新与版本
+
 1. 2015-1-8， 20:00
 上传修改后的第一版。
 
@@ -64,4 +65,19 @@ git clone https://github.com/Hyapp/XAUATThesisTemplate.git
 恢复了直接引用bib文件的能力，使用 gkt-7714-2015-numerical 中的方案，详见 main.tex 中对文献的引用方式。
 修改命令 \mycite 为 \themcite 更加规范。
 
+## 如何下载并使用新版本
+
+1. 下载新模板放入一个新的文件夹中
+
+2. 将之前写的 Texs 文件夹中的所有 .tex 文件复制粘贴到新模板的文件夹下
+
+3. 改写 main.tex 中 \input 命令中的子文件名。一般为 Texs/*.tex
+
+4. Enjoy！
+
+### 注意！
+版本 2 开始，默认的参考文献管理使用 .bib 文件管理，它对应了放在了 Biblio 文件夹中的 Bibliography.bib 文件
+如果想恢复之前的使用 Texs/References.tex 文件手动编写，请参考 main.tex 中参考文献部分！
+
 ## 欢迎大家 Star，有能力的大佬们提 PR 
+
