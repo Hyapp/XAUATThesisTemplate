@@ -8,15 +8,22 @@
 ## 使用方法
 
 ### 下载
+
+#### 方式 1
 直接下载：如果现在在 github 网站中，找右上面找绿色：Code, 点最下面 Download zip
 
 如果现在在 gitee 网站中，找右上角橘红色：克隆/下载，点开后右上角 下载ZIP
 
-或在安装了git的电脑上在 Shell 切换到对应的文件夹中运行
+下载的 ZIP 文件解压到某个文件夹中！
+
+#### 方式 2
+
+在安装了git的电脑上在 Shell/Powershell 切换到对应的文件夹中运行
 
 ```Shell
 git clone https://github.com/Hyapp/XAUATThesisTemplate.git
 ```
+
 ### 编译
 
 编译 main.tex 即可
@@ -79,6 +86,7 @@ git clone https://github.com/Hyapp/XAUATThesisTemplate.git
 
 ### 注意！
 版本 2 开始，默认的参考文献管理使用 .bib 文件管理，它对应了放在了 Biblio 文件夹中的 Bibliography.bib 文件
+
 如果想恢复之前的使用 Texs/References.tex 文件手动编写，请参考 main.tex 中参考文献部分！
 
 ## 欢迎大家 Star，有能力的大佬们提 PR 
