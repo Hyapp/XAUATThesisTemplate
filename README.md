@@ -67,7 +67,7 @@ git clone https://github.com/Hyapp/XAUATThesisTemplate.git
 
 ## 更新与版本
 
-1. 2015-1-8， 20:00
+1. 2025-1-8， 20:00
 上传修改后的第一版。
 
 2. 2025-1-18, 10:50
