@@ -1,3 +1,7 @@
+---
+documentclass: ctexart
+---
+
 # 2025 西安建筑科技大学硕士毕业论文模板
 
 这是按照2024年西安建筑科技大学LaTeX模板改的之前学姐学长的模板。
@@ -67,12 +71,24 @@ git clone https://github.com/Hyapp/XAUATThesisTemplate.git
 
 ## 更新与版本
 
-1. 2025-1-8， 20:00
+1. 2025-01-08, 20:00
 上传修改后的第一版。
 
-2. 2025-1-18, 10:50
+2. 2025-01-18, 10:50
 恢复了直接引用bib文件的能力，使用 gkt-7714-2015-numerical 中的方案，详见 main.tex 中对文献的引用方式。
-修改命令 \mycite 为 \themcite 更加规范。
+修改命令 mycite 为 themcite 更加规范。
+
+3. 2025-02-14, 12:00
+    1. 更新了引用方式，可以在正文中将参考文献引用大写
+    2. 修复了学术学位与数学位置相反的问题
+
+现有引用参考文献方式见下表
+| 位置 | 方式 | 命令 |
+|:-:|:-:|:-:|
+| 定理等后 | 上标 | themcite |
+| 正文 | 上标 | supercite |
+| 正文 | 正常 | cite |
+
 
 ## 如何使用新版本
 
@@ -80,7 +96,7 @@ git clone https://github.com/Hyapp/XAUATThesisTemplate.git
 
 2. 将之前写的 Texs 文件夹中的所有 .tex 文件复制粘贴到新模板的文件夹下
 
-3. 改写 main.tex 中 \input 命令中的子文件名。一般为 Texs/*.tex
+3. 改写 main.tex 中 \\input 命令中的子文件名。一般为 Texs/*.tex
 
 4. Enjoy！
 
