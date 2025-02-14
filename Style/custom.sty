@@ -151,13 +151,15 @@ macros package]
 \theoremnumbering{arabic}
 \theoremsymbol{} %定理结束时自动添加的标志
 \newtheorem{theorem}{\hspace{2em}\XAUAT@lable@theorem}[section]
-\newtheorem{definition}{\hspace{2em}\XAUAT@lable@definition}[section]
-\newtheorem{lemma}{\hspace{2em}\XAUAT@lable@lemma}[section]
-\newtheorem{corollary}{\hspace{2em}\XAUAT@lable@corollary}[section]
-\newtheorem{proposition}{\hspace{2em}\XAUAT@lable@proposition}[section]
-\newtheorem{example}{\hspace{2em}\XAUAT@lable@example}[section]
-\newtheorem{remark}{\hspace{2em}\XAUAT@lable@remark}[section]
-\newtheorem{question}{\hspace{2em}\XAUAT@lable@question}[section]
+
+\newtheorem{definition}[theorem]{\hspace{2em}\XAUAT@lable@definition}
+\newtheorem{lemma}[theorem]{\hspace{2em}\XAUAT@lable@lemma}
+\newtheorem{corollary}[theorem]{\hspace{2em}\XAUAT@lable@corollary}
+\newtheorem{proposition}[theorem]{\hspace{2em}\XAUAT@lable@proposition}
+\newtheorem{example}[theorem]{\hspace{2em}\XAUAT@lable@example}
+\newtheorem{remark}[theorem]{\hspace{2em}\XAUAT@lable@remark}
+\newtheorem{question}[theorem]{\hspace{2em}\XAUAT@lable@question}
+\newtheorem{axiom}[theorem]{\hspace{2em}\XAUAT@lable@axiom}
 
 % \numberwithin{theorem}{section}
 % \numberwithin{definition}{section}
