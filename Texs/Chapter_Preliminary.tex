@@ -113,6 +113,35 @@ Lawson在1990年进一步弱化了Pastijn提出的 $\ast$-Green关系，形成�
     \[
         \frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C}
     \]
+    \begin{proof}
+        在直角三角形中，利用勾股定理 $a^2 + b^2 = c^2$。
+        而直角对的边长为 $c$，即有 $\sin C = 1$，进而 $\frac{c}{\sin C} = c$。
+        此时 $\sin A = \frac{a}{c}$，因此 $\frac{a}{\sin A} = \frac{a}{\frac{a}{c}} = c$。
+        类似地，$\frac{b}{\sin B} = c$。
+        这就对直角三角形证明了正弦定理。
+
+        对于任意三角形，三个角中必有最大的角设为 $A$，以此角对应的顶点向对应的边 $BC$ 作垂线，记新得到的点为 $D$，此时得到两个子直角三角形 $ABD$ 和 $ACD$。
+        
+        根据直角三角形的正弦定理分别有
+        \[
+            c = \frac{c}{\sin \frac{\pi}{2}} = \frac{AD}{\sin B} = \frac{BD}{\sin BAD}
+        \]
+        和
+        \[
+            b = \frac{b}{\sin \frac{\pi}{2}} = \frac{AD}{\sin C} = \frac{DC}{\sin DAC}
+        \]
+        
+        此时有 $\sin C = \frac{AD}{b}$ 和 $\sin B = \frac{AD}{c}$。
+        \[
+            \frac{c}{\sin C} = \frac{c}{\frac{AD}{b}} = \frac{bc}{AD}
+            \text{ 和 }
+            \frac{b}{\sin B} = \frac{b}{\frac{AD}{c}} = \frac{bc}{AD}
+        \]
+        这就证明了 $\frac{b}{\sin B} = \frac{c}{\sin C}$。
+
+        再次对角 $B$ 使用上述方法，可以得到 $\frac{a}{\sin A} = \frac{c}{\sin C}$。
+        这就证明了正弦定理。
+    \end{proof}
 \end{proposition}
 
 \begin{example} 
