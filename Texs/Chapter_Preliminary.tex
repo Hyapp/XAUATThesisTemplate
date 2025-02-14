@@ -1,114 +1,14 @@
-\chapter{预备知识}
+\chapter{使用方法演示；大章标题}
 
-\section{基本概念}
-
-\begin{definition}\themcite{Howie1995}
-    令$S$为非空集合, $S$上有一个二元运算 $\mu:S\times S \to S$, 并且运算 $\mu$ 满足结合律：$\forall a,b,c \in S$, 满足 $((a,b)\mu, c)\mu = (a, (b, c)\mu)\mu$, 则称集合$S$和二元运算$\mu$为半群。
-\end{definition}
-
-通常为了简便起见，记二元运算$\mu$为乘法，即记$(a,b)\mu$，为$a\cdot b$，或进一步简记为$ab$。
-
-\begin{definition}\themcite{Howie1995}
-    令$S$为半群，$T$为$S$的一个子集，如果$T$关于$S$上的二元运算$\mu$封闭，即 $\forall a,b \in T$, 有$ab\in T$, 则称 $T$ 连同$S$上二元运算$\mu$ 在 $T$ 上的限制称为$S$ 的子半群。
-\end{definition}
-
-\begin{definition}\themcite{Howie1995}
-    令$S$为半群，如果存在元素$1 \in S$, 并且满足$\forall s\in S, 1s=s1=s$ ，则称元素 $1$ 为半群$S$的幺元。
-\end{definition}
-
-\begin{lemma}\themcite{Howie1995}
-    令$S$为半群，如果$S$有幺元，那么它只有一个幺元。
-\end{lemma}
-
-\begin{definition}\themcite{Howie1995}
-    如果半群$S$中含有幺元，则称其为幺半群。
-\end{definition}
-
-\begin{definition}\themcite{Howie1995}
-    令$S$是半群，如果$S$不含幺元，则添加一个幺元$1$，并且任意$s\in S$有 $1s = s1 = s$. 那么$S\cup{1}$是幺半群，记为$S^1$。即$S^1$ 表示如下半群
-    \begin{equation*}
-        S^1=\begin{cases}
-            S & \text{若}S \text{包含幺元} \\
-            S \cup {1} & \text{若}S \text{不含幺元}
-        \end{cases}
-    \end{equation*}
-\end{definition}
-
-\begin{definition}\themcite{Howie1995}
-    令$S$是半群，如果元素$a\in S$，满足 $aa=a$，则称$a$为幂等元。
-\end{definition}
-
-\begin{definition}
-    若半群$S$中的元素都是幂等元，则称半群$S$为带。
-
-    (i) 若对于带$S$中任意两个元素的二元运算都可交换，即 $ab=ba$，则称带$S$为半格。
-\end{definition}
-
-\begin{definition}\themcite{Howie1995}
-    令 $S$ 为半群，$\rho$ 为 $S$ 上的一个二元关系，并且 $S$ 中的元素 $a, b$ 有$\rho$ 关系
-
-    (i) 对于任意 $c \in S$, 有 $ca \rho cb$，则称 $\rho$ 是左相容的；
-
-    (ii) 对于任意 $c \in S$, 有 $ac \rho bc$，则称 $\rho$ 是右相容的；
-
-    (iii) 若$\rho$ 即是左相容的，也是右相容的，则称 $\rho$ 是相容的。
-\end{definition}
-
-\begin{definition}\themcite{Howie1995}
-    令 $S$ 为半群，$\rho$ 为 $S$ 上的一个等价关系。若
-
-    (i) $\rho$ 是左相容的，则称 $\rho$ 是左同余；
-
-    (ii) $\rho$ 是右相容的，则称 $\rho$ 是右同余；
-
-    (iii) $\rho$ 是相容的，则称 $\rho$ 是同余。
-\end{definition}
-
-
-
-
-\section{格林关系与正则半群}
-Green于1965年在半群上定义了格林关系，开启了研究半群的工具。
-\begin{definition}\themcite{Howie1995}
-    令$S$为半群，$a, b$ 为$S$的两个元素。
-
-    (i) 若存在元素$x, y$ 使得 $xa=b$ 并且 $yb=a$，则称$a\mathcal{L}b$。
-
-    (ii) 若存在元素 $x, y$ 使得 $ax=b$ 并且 $by=a$，则称$a\mathcal{R}b$。
-
-    (iii) 若 $a\mathcal{L}b$ 并且 $a\mathcal{R}b$，则称$a\mathcal{H}b$。
-    
-    
-\end{definition}
-\section{广义格林关系与广义正则半群}
-Pastijn在1975年弱化了Green关系的条件，形成了 $\ast$-Green 关系。
-
-\begin{definition}
-    令 $S$ 为半群，$a, b$ 为 $S$ 的两个元素。
-
-    (i) $\mathcal{L}^{\ast} = \{(a,b)\in S\times S| \forall x,y \in S^1 \rightarrow ax=ay \Leftrightarrow bx=by\}$；
-
-    (ii) $\mathcal{R}^{\ast} = \{(a,b)\in S\times S| \forall x,y \in S^1 \rightarrow xa=ya \Leftrightarrow xb=yb\}$；
-
-    (iii) $\mathcal{H}^{\ast} = \mathcal{L}^{\ast} \cap \mathcal{R}^{\ast}$
-\end{definition}
-
-Lawson在1990年进一步弱化了Pastijn提出的 $\ast$-Green关系，形成了$\sim$-Green关系。
-
-\begin{definition}
-    令 $S$ 为半群，$a, b$ 为 $S$ 的两个元素。
-
-    (i) $\tilde{\mathcal{L}} = \{(a,b)\in S\times S| \forall e \in E \rightarrow ae=a \Leftrightarrow be=b\}$；
-
-    (ii) $\tilde{\mathcal{R}} = \{(a,b)\in S\times S| \forall e \in E \rightarrow ea=a \Leftrightarrow eb=b\}$；
-
-    (iii) $\tilde{\mathcal{H}} = \tilde{\mathcal{L}} \cap \tilde{\mathcal{R}}$
-\end{definition}
+\section{节}
 
 \begin{axiom}
     $\sin^2 x + \cos^2 x = 1$
 \end{axiom}
 
+\subsection{小节}
+
+\textcolor{red}{下面命题演示了如何写非编号公式，编号公式与引用编号公式！}
 \begin{proposition} 正弦定理
     \[
         \frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C}
@@ -123,15 +23,15 @@ Lawson在1990年进一步弱化了Pastijn提出的 $\ast$-Green关系，形成�
         对于任意三角形，三个角中必有最大的角设为 $A$，以此角对应的顶点向对应的边 $BC$ 作垂线，记新得到的点为 $D$，此时得到两个子直角三角形 $ABD$ 和 $ACD$。
         
         根据直角三角形的正弦定理分别有
-        \[
+        \begin{equation}\label{formula 1}
             c = \frac{c}{\sin \frac{\pi}{2}} = \frac{AD}{\sin B} = \frac{BD}{\sin BAD}
-        \]
+        \end{equation}
         和
-        \[
+        \begin{equation}\label{formula 2}
             b = \frac{b}{\sin \frac{\pi}{2}} = \frac{AD}{\sin C} = \frac{DC}{\sin DAC}
-        \]
+        \end{equation}
         
-        此时有 $\sin C = \frac{AD}{b}$ 和 $\sin B = \frac{AD}{c}$。
+        根据式 \ref{formula 1} 和 \ref{formula 2} 有 $\sin C = \frac{AD}{b}$ 和 $\sin B = \frac{AD}{c}$。
         \[
             \frac{c}{\sin C} = \frac{c}{\frac{AD}{b}} = \frac{bc}{AD}
             \text{ 和 }
@@ -144,16 +44,24 @@ Lawson在1990年进一步弱化了Pastijn提出的 $\ast$-Green关系，形成�
     \end{proof}
 \end{proposition}
 
-\begin{example} 
-    \[
-        \lim_{x\to +\infty} \frac{\sin x}{x} = 0
-    \]
+\textcolor{red}{下面例演示了如何使用多行公式，它只产生一个居中编号，给定理等定义名字，后面将引用}
+\begin{example}\label{exap: sin cos infty}
+    \begin{equation}
+        \begin{aligned}
+            \lim_{x\to +\infty} \frac{\sin x}{x} = 0 \\
+            \lim_{x\to +\infty} \frac{\cos x}{x} = 0
+        \end{aligned}
+    \end{equation}
 \end{example}
 
+\textcolor{red}{下面推论的证明中引用了上一个例子}
 \begin{corollary}
     \[
         \lim_{x\to +\infty} \frac{\sin^2 x}{x^2} = 0
     \]
+    \begin{proof}
+        根据例 \ref{exap: sin cos infty}，显然成立。
+    \end{proof}
 \end{corollary}
 
 \begin{remark}
@@ -162,9 +70,21 @@ Lawson在1990年进一步弱化了Pastijn提出的 $\ast$-Green关系，形成�
     \]
 \end{remark}
 
+\begin{equation}
+    \frac{\mathrm{d}}{\mathrm{d}x} \tan x = \sec^2 x
+\end{equation}
 
-这个是测试引用的段落\cite{Ibrahim2022}，你觉得呢\cite[定理 8]{SB2077}。
+\textcolor{red}{下面例演示了插入图片并缩放为0.5倍原始大小，建议将图片全放入 Imgs 文件夹中}
 
-冯唐易老，李广难封\supercite{SB2077}。
+\begin{figure}[h]
+    \centering % 图片居中
+    \includegraphics[scale=0.5]{Imgs/xiaoming.png}
+    \caption{这是校标志}
+\end{figure}
+
+\textcolor{red}{下面段落演示了如何以不同方式引用参考文献}
+
+这个是测试引用的段落\cite{Ibrahim2022}，具体证明见 \cite[定理 8]{SB2077}。
+数学使人迷惑\supercite{SB2077}。
 
 
