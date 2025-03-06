@@ -315,23 +315,25 @@
 {\chapter[\XAUAT@label@abstract]{
 \zihao{-2}\heiti \XAUAT@value@title 
 \vskip -12pt
-\makebox[4em][s]{\zihao{-4}{\kaishu\XAUAT@label@degreeType}}\makebox[1em][s]{\zihao{-4}{\kaishu\XAUAT@value@degreeType}}
+\makebox[1em][r]{\zihao{-4}{\kaishu\XAUAT@label@degreeType}}\makebox[1em][s]{\zihao{-4}{\kaishu\XAUAT@value@degreeType}}
 \vskip -12pt
-\makebox[4em][s]{\zihao{-4}{\kaishu\XAUAT@label@majorType}}\makebox[1em][s]{\zihao{-4}{\kaishu\XAUAT@value@majorType}}\\
+\makebox[1em][r]{\zihao{-4}{\kaishu\XAUAT@label@majorType}}\makebox[1em][s]{\zihao{-4}{\kaishu\XAUAT@value@majorType}}\\
 {\zihao{3}\textbf{\heiti \XAUAT@label@abstract}}}}
 
   {}
 %% define chinese keywords
 \newcommand\keywords[1]{%
     \vspace{2ex}\noindent{\zihao{4}\heiti \XAUAT@label@keywords} #1}
+
+
 %% define engish abstract
 \newenvironment{englishabstract}
 {\chapter[\XAUAT@label@englishabstract]{
 \zihao{-2}\textbf{\heiti \XAUAT@value@englishtitle}
 \vskip -12pt
-\makebox[4em][r]{\zihao{-4}{\kaishu{Type of Degree:\quad}}}\makebox[1em][s]{\zihao{-4}{\kaishu\XAUAT@value@englishDegreeType}}
+\makebox[2em][r]{\zihao{-4}{Type of Degree:\quad}}\makebox[1em][s]{\zihao{-4}{\textnormal{\XAUAT@value@englishDegreeType}}}
 \vskip -12pt
-\makebox[4em][r]{\zihao{-4}{\kaishu{Speciality:\quad}}}\makebox[1em][s]{\zihao{-4}{\kaishu\XAUAT@value@englishmajor}}\\\vskip 5pt
+\makebox[2em][r]{\zihao{-4}{\kaishu{Speciality:\quad}}}\makebox[1em][s]{\zihao{-4}{\textnormal{\XAUAT@value@englishmajor}}}\\\vskip 5pt
 {\zihao{-3}\textbf{\heiti \XAUAT@label@englishabstract}}}}
 
 %% define engish keywords

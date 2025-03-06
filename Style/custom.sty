@@ -142,15 +142,19 @@ macros package]
 \RequirePackage{amsmath,amssymb}% AMSLaTeX宏包.
 \RequirePackage[amsmath,thmmarks]{ntheorem}
 %%----------------------- Theorems -----------------------------------
+
+% 编号定理环境
+
 \theoremstyle{plain}
 \theoremheaderfont{\heiti}
 \theorembodyfont{\songti} \theoremindent0em
-%\theorempreskip{0pt}
-%\theorempostskip{0pt}
+% \theorempreskip{0pt}
+% \theorempostskip{0pt}
 %\theoremseparator{\hspace{1em}}
+
 \theoremnumbering{arabic}
 \theoremsymbol{} %定理结束时自动添加的标志
-\newtheorem{theorem}{\hspace{2em}\XAUAT@lable@theorem}[section]
+\newtheorem{theorem}{\hspace{2em}\XAUAT@lable@theorem}[section] 
 
 \newtheorem{definition}[theorem]{\hspace{2em}\XAUAT@lable@definition}
 \newtheorem{lemma}[theorem]{\hspace{2em}\XAUAT@lable@lemma}
@@ -161,22 +165,26 @@ macros package]
 \newtheorem{question}[theorem]{\hspace{2em}\XAUAT@lable@question}
 \newtheorem{axiom}[theorem]{\hspace{2em}\XAUAT@lable@axiom}
 
-% \numberwithin{theorem}{section}
-% \numberwithin{definition}{section}
-% \numberwithin{proposition}{section}
-% \numberwithin{corollary}{section}
-% \numberwithin{lemma}{section}
 \setlength{\theorempostskipamount}{0.15em}%调整定理环境与下文的距离
-% \renewenvironment{proof}{{\setlength\parindent{1em} \kg  \bf 证明： \/}}
 
-\newcommand{\themcite}[1]{\!\!\supercite{#1}}
-
+% 非编号定理环境
 \theoremstyle{nonumberplain}
 \theoremheaderfont{\heiti}
 \theorembodyfont{\normalfont \rm \songti}
-\theoremindent0em \theoremseparator{\hspace{1em}}
-%\theoremsymbol{$\square$}
+\theoremindent0em %\theoremseparator{\hspace{1em}}
 \newtheorem{proof}{\hspace{2em}\XAUAT@lable@proof}
+
+% endregion 非编号定理环境
+
+% region 自定义环境
+\newcommand{\themcite}[1]{\!\!\supercite{#1}}
+\renewcommand{\labelenumi}{[\theenumi]}
+\captionsetup{labelformat=default,labelsep=quad} %去除冒号
+\renewcommand {\theequation} {\thechapter{}-\arabic{equation}}
+
+% endregion 自定义环境
+
+
 
 \endinput
 %% End of file
