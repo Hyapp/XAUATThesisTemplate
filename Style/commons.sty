@@ -34,10 +34,6 @@ macros package]
 \DeclareOption{lscape}{% landscape layout
     \COMMONS@lscapetrue%
 }
-\newif\ifCOMMONS@geometry \COMMONS@geometryfalse
-\DeclareOption{geometry}{% enable geometry for redefining page layout
-    \COMMONS@geometrytrue%
-}
 \newif\ifCOMMONS@numbered \COMMONS@numberedtrue
 \newif\ifCOMMONS@authoryear \COMMONS@authoryearfalse
 \newif\ifCOMMONS@alpha \COMMONS@alphafalse
@@ -169,10 +165,7 @@ macros package]
     \RequirePackage{pdflscape}% landscape environment
     \RequirePackage[absolute]{textpos}% rotated page number
 \fi
-\ifCOMMONS@geometry% enable geometry to redefine page layout
-    \RequirePackage{geometry}% page layout
-    %\RequirePackage{setspace}% line spacing
-\fi
+
 \RequirePackage{microtype}% improves general appearance of the text
 %%
 %%% >>> Natural Sciences Citations and References
@@ -323,10 +316,17 @@ macros package]
 %%
 %%% >>> Layout and Margin
 %%
-\ifCOMMONS@geometry% enable geometry to redefine page layout
-    \geometry{paper=a4paper,left=2.5cm,right=25mm,top=30mm,bottom=20mm,
-              headheight=2cm,headsep=1mm,footskip=1.5cm,dvipdfm}% reduced margins at each side.
-\fi
+\RequirePackage{geometry}
+\geometry{
+    left=2.5cm, 
+    right=2.5cm,
+    bottom=2cm, 
+    top=4.5cm, 
+    headsep=12pt, 
+    footskip=1cm, 
+    bindingoffset=0.5cm
+}
+
 %\linespread{1.5}% 1.5 for "one and a half" line spacing, and 2.0 for "double" line spacing
 %\setlength{\parskip}{0.5ex plus 0.25ex minus 0.25ex}% skip space a paragraph
 

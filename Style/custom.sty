@@ -148,8 +148,8 @@ macros package]
 \theoremstyle{plain}
 \theoremheaderfont{\heiti}
 \theorembodyfont{\songti} \theoremindent0em
-% \theorempreskip{0pt}
-% \theorempostskip{0pt}
+\theorempreskip{0.0em}
+\theorempostskip{0.0em}
 %\theoremseparator{\hspace{1em}}
 
 \theoremnumbering{arabic}
@@ -172,6 +172,8 @@ macros package]
 \theoremheaderfont{\heiti}
 \theorembodyfont{\normalfont \rm \songti}
 \theoremindent0em %\theoremseparator{\hspace{1em}}
+\theorempreskip{0.0em}
+\theorempostskip{0.0em}
 \newtheorem{proof}{\hspace{2em}\XAUAT@lable@proof}
 
 % endregion 非编号定理环境
@@ -186,10 +188,10 @@ macros package]
 
 
 \AtBeginDocument{
-    \setlength{\abovedisplayskip}{0em}
-    \setlength{\abovedisplayshortskip}{0em}
-    \setlength{\belowdisplayskip}{0.5em}
-    \setlength{\belowdisplayshortskip}{0.5em}
+    \setlength{\abovedisplayskip}{0.0em plus 0.1em}
+    \setlength{\abovedisplayshortskip}{0.0em plus 0.1em}
+    \setlength{\belowdisplayskip}{0.5em plus 0.1em minus 0.1em}
+    \setlength{\belowdisplayshortskip}{0.5em plus 0.1em minus 0.1em}
 }
 
 \endinput

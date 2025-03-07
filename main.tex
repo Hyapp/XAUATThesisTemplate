@@ -1,14 +1,8 @@
-\documentclass[doublesided, ctexart]{Style/xauat}
-\usepackage{booktabs}
-\usepackage[left=2.5cm, right=2.5cm, bottom=2cm, top=4.5cm, footskip=1cm, bindingoffset=0.5cm]{geometry}
-\usepackage{amscd,amssymb,amsfonts,amsbsy,amsmath,verbatim,color}
+\documentclass[doublesided]{Style/xauat}
 \usepackage[super,myhdr,list]{Style/commons}% common settings
 \usepackage{Style/custom}% user defined commands
-\usepackage{array, caption, threeparttable}
+
 \captionsetup[table]{singlelinecheck=false}%%%% -------------------------------------------------------------------------------%%%%******************************** Content *****************************************
-\usepackage{chngpage}
-\usepackage{mathrsfs}
-\usepackage{float}
 
 \begin{document}
 
@@ -16,11 +10,11 @@
 %% Frontmatter of Title page, Table of contents, Preface chapter.
 \frontmatter
 
-% title page
-\input{Texs/Frontpages}
+\input{Texs/Frontpages} % title page
 
 %abstract, dedication
 \pagenumbering{Roman}
+
 \input{Texs/Abstract}
 
 
