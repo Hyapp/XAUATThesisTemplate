@@ -328,7 +328,7 @@
 
 %% define engish abstract
 \newenvironment{englishabstract}
-{\chapter[\XAUAT@label@englishabstract]{
+{\chapter[{\bfseries \XAUAT@label@englishabstract}]{
 \zihao{-2}\textbf{\heiti \XAUAT@value@englishtitle}
 \vskip -12pt
 \makebox[2em][r]{\zihao{-4}{Type of Degree:\quad}}\makebox[1em][s]{\zihao{-4}{\textnormal{\XAUAT@value@englishDegreeType}}}
