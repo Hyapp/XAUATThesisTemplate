@@ -13,6 +13,7 @@
     \[
         \frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C}
     \]
+
     \begin{proof}
         在直角三角形中，利用勾股定理 $a^2 + b^2 = c^2$。
         而直角对的边长为 $c$，即有 $\sin C = 1$，进而 $\frac{c}{\sin C} = c$。
@@ -59,12 +60,14 @@
     \[
         \lim_{x\to +\infty} \frac{\sin^2 x}{x^2} = 0
     \]
+
     \begin{proof}
         根据例 \ref{exap: sin cos infty}，显然成立。
     \end{proof}
 \end{corollary}
 
-\begin{remark}
+\textcolor{red}{以下注演示了如果定理等和证明若起始没有内容，或是大公式，则应当在后面加入空格 $\backslash$ quad 来 让其自动对齐，否则将产生不正确的上下对齐}
+\begin{remark} \quad
     \[
         \lim_{x\to 0} \frac{x}{x} = 1
     \]
@@ -86,5 +89,26 @@
 
 这个是测试引用的段落\cite{Ibrahim2022}，具体证明见 \cite[定理 8]{SB2077}。
 数学使人迷惑\supercite{SB2077}。
+
+\begin{theorem}
+    这是第一行定理
+    这是第一行定理
+    这是第一行定理
+    这是第一行定理
+    这是第一行定理
+    这是第一行定理
+    这是第一行定理
+    这是第一行定理
+    \[
+        x + x + x + x +
+        x + x + x + x +
+        x + x + x + x +
+        x + x + x + x
+    \]
+\end{theorem}
+
+\begin{theorem}
+    这是第二行定理
+\end{theorem}
 
 

@@ -18,7 +18,7 @@
 
 
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{xauat}
+\ProvidesClass{Style/xauat}
   [2025/01/07 v1.0 xauat document class]
 %%%%% --------------------------------------------------------------------------------
 %%
@@ -99,12 +99,14 @@
 %% part two -- vertical heights
 %% top height + textheight + bottom height = paperheight
 %% top height = 1.0in (fixed) + voffset + topmargin + headheight + headsep
+
 \setlength{\textheight}{235mm}% set required text height first整体文本高度
 \setlength{\voffset}{-17.4mm}% set vertical offset
 \setlength{\topmargin}{14mm}% vertical margin above header横线距上面高度
 \setlength{\headheight}{5mm}% header height
-\setlength{\headsep}{5pt}% vertical margin between header and body text 文本与上方横线距离
+\setlength{\headsep}{12pt}% vertical margin between header and body text 文本与上方横线距离
 \setlength{\footskip}{29.5pt}% vertical margin between footer and body text
+
 %- specifies the amount of space between paragraphs.
 \setlength{\parskip}{0.5ex plus 0.25ex minus 0.25ex}
 %% line spacing
@@ -323,7 +325,7 @@
   {}
 %% define chinese keywords
 \newcommand\keywords[1]{%
-    \vspace{2ex}\noindent{\zihao{4}\heiti \XAUAT@label@keywords} #1}
+    \vspace{2ex}\noindent{\zihao{-4}\heiti \XAUAT@label@keywords} #1}
 
 
 %% define engish abstract
@@ -338,7 +340,7 @@
 
 %% define engish keywords
 \newcommand\englishkeywords[1]{%
-  \vspace{2ex}\noindent{\zihao{4}\bfseries \XAUAT@label@englishkeywords} #1}
+  \vspace{2ex}\noindent{\zihao{-4}\bfseries \XAUAT@label@englishkeywords} #1}
 
 
 
