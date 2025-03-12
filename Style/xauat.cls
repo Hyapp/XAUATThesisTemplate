@@ -307,7 +307,7 @@
   \vskip 15pt
 
   \begin{center}
-    {\zihao{3}\songti\textit{（涉密论文以下不填写）}}
+    {\zihao{3}\textit{（涉密论文以下不填写）}}
   \end{center}
 
   \vskip 15pt
