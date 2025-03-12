@@ -106,7 +106,7 @@ macros package]
 %%
 \setcounter{tocdepth}{4}% the depth for the Table of Contents.
 \usepackage{titletoc}
-\titlecontents{chapter}[3.5em]{\bfseries \zihao{-4}}{\contentslabel{3.5em}}{\hspace*{-3.5em}}{~\titlerule*[0.6pc]{$.$}~\contentspage}
+\titlecontents{chapter}[3.5em]{\bfseries\heiti\zihao{-4}}{\contentslabel{3.5em}}{\hspace*{-3.5em}}{~\titlerule*[0.6pc]{$.$}~\contentspage}
 \titlecontents{section}[3em]{\zihao{-4}}{\contentslabel{2em}}{\hspace*{-2em}}{~\titlerule*[0.6pc]{$.$}~\contentspage}
 \titlecontents{subsection}[6em]{\zihao{-4}}{\contentslabel{3em}}{\hspace*{-2em}}{~\titlerule*[0.6pc]{$.$}~\contentspage}
 \titlecontents{subsubsection}[11em]{\zihao{-4}}{\contentslabel{4em}}{\hspace*{-2em}}{~\titlerule*[0.6pc]{$.$}~\contentspage}
@@ -146,7 +146,7 @@ macros package]
 % 编号定理环境
 
 \theoremstyle{plain}
-\theoremheaderfont{\heiti}
+\theoremheaderfont{\songbf}
 \theorembodyfont{\songti} \theoremindent0em
 \theorempreskip{0.0em}
 \theorempostskip{0.0em}
@@ -154,27 +154,27 @@ macros package]
 
 \theoremnumbering{arabic}
 \theoremsymbol{} %定理结束时自动添加的标志
-\newtheorem{theorem}{\hspace{2em}\XAUAT@lable@theorem}[section] 
+\newtheorem{theorem}{\hspace{2em}\bfseries\textbf\XAUAT@lable@theorem}[section] 
 
-\newtheorem{definition}[theorem]{\hspace{2em}\XAUAT@lable@definition}
-\newtheorem{lemma}[theorem]{\hspace{2em}\XAUAT@lable@lemma}
-\newtheorem{corollary}[theorem]{\hspace{2em}\XAUAT@lable@corollary}
-\newtheorem{proposition}[theorem]{\hspace{2em}\XAUAT@lable@proposition}
-\newtheorem{example}[theorem]{\hspace{2em}\XAUAT@lable@example}
-\newtheorem{remark}[theorem]{\hspace{2em}\XAUAT@lable@remark}
-\newtheorem{question}[theorem]{\hspace{2em}\XAUAT@lable@question}
-\newtheorem{axiom}[theorem]{\hspace{2em}\XAUAT@lable@axiom}
+\newtheorem{definition}[theorem]{\hspace{2em}\bfseries\textbf\XAUAT@lable@definition}
+\newtheorem{lemma}[theorem]{\hspace{2em}\bfseries\textbf\XAUAT@lable@lemma}
+\newtheorem{corollary}[theorem]{\hspace{2em}\bfseries\textbf\XAUAT@lable@corollary}
+\newtheorem{proposition}[theorem]{\hspace{2em}\bfseries\textbf\XAUAT@lable@proposition}
+\newtheorem{example}[theorem]{\hspace{2em}\bfseries\textbf\XAUAT@lable@example}
+\newtheorem{remark}[theorem]{\hspace{2em}\bfseries\textbf\XAUAT@lable@remark}
+\newtheorem{question}[theorem]{\hspace{2em}\bfseries\textbf\XAUAT@lable@question}
+\newtheorem{axiom}[theorem]{\hspace{2em}\bfseries\textbf\XAUAT@lable@axiom}
 
 \setlength{\theorempostskipamount}{0.15em}%调整定理环境与下文的距离
 
 % 非编号定理环境
 \theoremstyle{nonumberplain}
-\theoremheaderfont{\heiti}
+\theoremheaderfont{\songbf}
 \theorembodyfont{\normalfont \rm \songti}
 \theoremindent0em %\theoremseparator{\hspace{1em}}
 \theorempreskip{0.0em}
 \theorempostskip{0.0em}
-\newtheorem{proof}{\hspace{2em}\XAUAT@lable@proof}
+\newtheorem{proof}{\hspace{2em}\textbf\XAUAT@lable@proof}
 
 % endregion 非编号定理环境
 
