@@ -195,6 +195,19 @@ macros package]
     \setlength{\belowdisplayshortskip}{0.5em plus 0.1em minus 0.1em}
 }
 
+
+%% 图表标题大小为 5 号字
+\DeclareCaptionFont{zh-five}{\zihao{5}}
+\AtBeginEnvironment{figure}
+{
+    \captionsetup{font={zh-five}, justification=centering}
+}
+
+\AtBeginEnvironment{table}
+{
+    \captionsetup{font={zh-five}, justification=centering}
+}
+
 \endinput
 %% End of file
 %%%%% --------------------------------------------------------------------------------
