@@ -66,6 +66,9 @@
 %% math packages
 \RequirePackage{amsmath,amssymb,amstext}
 \RequirePackage{amscd,amssymb,amsfonts,amsbsy,amsmath,verbatim,color}
+\RequirePackage{multirow}
+\RequirePackage{tabularx}
+
 %%%%% --------------------------------------------------------------------------------
 %%
 %%%%************************ Load Class Configuretion ********************************
@@ -160,6 +163,14 @@
 \newcommand\pingyuerens[1]{\def\XAUAT@value@pingyuerens{#1}}
 \newcommand\school[1]{\def\XAUAT@value@school{#1}}
 \newcommand\defensedate[1]{\def\XAUAT@value@defensedate{#1}}
+
+
+\RequirePackage{fontspec}% fontspec package.
+\defaultfontfeatures{Ligatures=TeX}% use tex style to support LaTeX quoting style.
+\setmainfont{Times New Roman}
+\setCJKmainfont{SimSun}[AutoFakeBold, AutoFakeSlant]
+\newCJKfontfamily\songbf{SimSun}[AutoFakeBold]
+\newCJKfontfamily\songit{SimSun}[AutoFakeSlant]
 
 %%%%% --------------------------------------------------------------------------------
 %%
@@ -274,6 +285,63 @@
     \cleardoublepage
   \fi
 }
+
+
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+
+\newcommand\makecommittee{
+  \cleardoublepage
+  \chapter[学位论文答辩委员会]{}
+  \vskip 20pt
+  \begin{center}
+      {\zihao{2}\heiti 硕士学位论文答辩委员会}
+  \end{center}
+
+  \vskip 30pt
+
+  \begin{center}
+    {\zihao{3}\heiti \XAUAT@value@title}
+  \end{center}
+
+  \vskip 15pt
+
+  \begin{center}
+    {\zihao{3}\songti\textit{（涉密论文以下不填写）}}
+  \end{center}
+
+  \vskip 15pt
+
+  \begin{table}[h]
+    \centering
+    \renewcommand\arraystretch{1.5}
+    \heiti{
+    \begin{tabularx}{\linewidth}{|P{3cm}|P{2cm}|P{2cm}|C|}
+      \hline
+      答辩人姓名  & \multicolumn{3}{c|}{\XAUAT@value@author} \\ \hline
+      答辩时间    & \multicolumn{3}{c|}{\XAUAT@value@defensedate} \\ \hline
+      答辩委员会  & 姓名 & 职称 & 工作单位 \\ \hline
+      主席        & & & 这个表格暂时不能填写 \\ \hline
+      \multirow{6}{*}{委员} 
+        & 1 & 2 & 3 \\ \cline{2-4}
+        & 1 & 2 & 3 \\ \cline{2-4}
+        & 1 & 2 & 3 \\ \cline{2-4}
+        & 1 & 2 & 3 \\ \cline{2-4}
+        & 1 & 2 & 3 \\ \cline{2-4}
+        & 1 & 2 & 3 \\
+      \hline                    
+    \end{tabularx}
+    }
+  \end{table}
+
+
+  \clearpage
+  \if@twoside
+    \thispagestyle{empty}
+    \cleardoublepage
+  \fi
+}
+
 %%%%% --------------------------------------------------------------------------------
 %%
 %%%%*********************** Make Author Declaration ***********************************
