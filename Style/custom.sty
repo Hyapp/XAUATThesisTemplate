@@ -181,11 +181,12 @@ macros package]
 % region 自定义环境
 \newcommand{\themcite}[1]{\!\!\supercite{#1}}
 \renewcommand{\labelenumi}{[\theenumi]}
-\captionsetup{labelformat=default,labelsep=quad} %去除冒号
+\captionsetup{labelformat=default,labelsep=quad, } %去除冒号
 \renewcommand {\theequation} {\thechapter{}-\arabic{equation}}
 
 % endregion 自定义环境
 
+\DeclareCaptionFont{zh-five}{\zihao{5}}
 
 \AtBeginDocument{
     \setlength{\abovedisplayskip}{0.0em plus 0.1em}
