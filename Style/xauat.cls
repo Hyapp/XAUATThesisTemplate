@@ -280,8 +280,7 @@
 %%
 \newcommand\makedeclaration{%
   \cleardoublepage
-  \thispagestyle{empty}
-
+  \chapter[声明]{}
   \begin{center}
       {\zihao{3}\heiti \XAUAT@value@declare@create}
   \end{center}
