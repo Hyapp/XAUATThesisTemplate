@@ -8,15 +8,21 @@
 
 %%%%******************************** Frontmatter *************************************
 %% Frontmatter of Title page, Table of contents, Preface chapter.
-\frontmatter
+
 
 \input{Texs/Frontpages} % title page
 
 \maketitle
 \makeenglishtitle
+
+\frontmatter
+
+\fancyfoot{}
 \makecommittee
 \makedeclaration
 
+\fancyfoot[LE]{\footnotesize \zihao{5}\thepage}% page number
+\fancyfoot[RO]{\footnotesize \zihao{5}\thepage}% page number
 %abstract, dedication
 \pagenumbering{Roman}
 

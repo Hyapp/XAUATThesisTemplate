@@ -292,6 +292,8 @@
 
 \newcommand\makecommittee{
   \cleardoublepage
+  \thispagestyle{empty}
+
   \chapter[学位论文答辩委员会]{}
   \vskip 20pt
   \begin{center}
@@ -321,19 +323,18 @@
       答辩人姓名  & \multicolumn{3}{c|}{\XAUAT@value@author} \\ \hline
       答辩时间    & \multicolumn{3}{c|}{\XAUAT@value@defensedate} \\ \hline
       答辩委员会  & 姓名 & 职称 & 工作单位 \\ \hline
-      主席        & & & 这个表格暂时不能填写 \\ \hline
+      主席        & \XAUAT@value@chiefname & \XAUAT@value@chiefTilte & \XAUAT@value@chiefOrganisation \\ \hline
       \multirow{6}{*}{委员} 
-        & 1 & 2 & 3 \\ \cline{2-4}
-        & 1 & 2 & 3 \\ \cline{2-4}
-        & 1 & 2 & 3 \\ \cline{2-4}
-        & 1 & 2 & 3 \\ \cline{2-4}
-        & 1 & 2 & 3 \\ \cline{2-4}
-        & 1 & 2 & 3 \\
+        & \XAUAT@value@staffNameOne & \XAUAT@value@staffTitleOne & \XAUAT@value@staffOrganisationOne \\ \cline{2-4}
+        & \XAUAT@value@staffNameTwo & \XAUAT@value@staffTitleTwo & \XAUAT@value@staffOrganisationTwo \\ \cline{2-4}
+        & \XAUAT@value@staffNameThree & \XAUAT@value@staffTitleThree & \XAUAT@value@staffOrganisationThree \\ \cline{2-4}
+        & \XAUAT@value@staffNameFour & \XAUAT@value@staffTitleFour & \XAUAT@value@staffOrganisationFour \\ \cline{2-4}
+        & \XAUAT@value@staffNameFive & \XAUAT@value@staffTitleFive & \XAUAT@value@staffOrganisationFive \\ \cline{2-4}
+        & \XAUAT@value@staffNameSix & \XAUAT@value@staffTitleSix & \XAUAT@value@staffOrganisationSix \\ 
       \hline                    
     \end{tabularx}
     }
   \end{table}
-
 
   \clearpage
   \if@twoside
@@ -341,6 +342,45 @@
     \cleardoublepage
   \fi
 }
+
+
+%%
+%%%%*********************** Make Committee ***********************************
+%%
+%\renewcommand\author[1]{\def\XAUAT@value@author{#1}}
+\newcommand{\chiefName}[1]{\def\XAUAT@value@chiefname{#1}}
+\newcommand{\chiefTitle}[1]{\def\XAUAT@value@chiefTilte{#1}}
+\newcommand{\chiefOrganisation}[1]{\def\XAUAT@value@chiefOrganisation{#1}}
+%1
+\newcommand{\staffNameOne}[1]{\def\XAUAT@value@staffNameOne{#1}}
+\newcommand{\staffTitleOne}[1]{\def\XAUAT@value@staffTitleOne{#1}}
+\newcommand{\staffOrganisationOne}[1]{\def\XAUAT@value@staffOrganisationOne{#1}}
+
+%2
+\newcommand{\staffNameTwo}[1]{\def\XAUAT@value@staffNameTwo{#1}}
+\newcommand{\staffTitleTwo}[1]{\def\XAUAT@value@staffTitleTwo{#1}}
+\newcommand{\staffOrganisationTwo}[1]{\def\XAUAT@value@staffOrganisationTwo{#1}}
+
+%3
+\newcommand{\staffNameThree}[1]{\def\XAUAT@value@staffNameThree{#1}}
+\newcommand{\staffTitleThree}[1]{\def\XAUAT@value@staffTitleThree{#1}}
+\newcommand{\staffOrganisationThree}[1]{\def\XAUAT@value@staffOrganisationThree{#1}}
+
+%4
+\newcommand{\staffNameFour}[1]{\def\XAUAT@value@staffNameFour{#1}}
+\newcommand{\staffTitleFour}[1]{\def\XAUAT@value@staffTitleFour{#1}}
+\newcommand{\staffOrganisationFour}[1]{\def\XAUAT@value@staffOrganisationFour{#1}}
+
+%5
+\newcommand{\staffNameFive}[1]{\def\XAUAT@value@staffNameFive{#1}}
+\newcommand{\staffTitleFive}[1]{\def\XAUAT@value@staffTitleFive{#1}}
+\newcommand{\staffOrganisationFive}[1]{\def\XAUAT@value@staffOrganisationFive{#1}}
+
+%6
+\newcommand{\staffNameSix}[1]{\def\XAUAT@value@staffNameSix{#1}}
+\newcommand{\staffTitleSix}[1]{\def\XAUAT@value@staffTitleSix{#1}}
+\newcommand{\staffOrganisationSix}[1]{\def\XAUAT@value@staffOrganisationSix{#1}}
+
 
 %%%%% --------------------------------------------------------------------------------
 %%
