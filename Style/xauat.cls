@@ -294,7 +294,7 @@
   \cleardoublepage
   \thispagestyle{empty}
 
-  \chapter[学位论文答辩委员会]{}
+  \chapter*[学位论文答辩委员会]{}
   \vskip 20pt
   \begin{center}
       {\zihao{2}\heiti 硕士学位论文答辩委员会}
@@ -388,7 +388,7 @@
 %%
 \newcommand\makedeclaration{%
   \cleardoublepage
-  \chapter[声明]{}
+  \chapter*[声明]{}
   \begin{center}
       {\zihao{3}\heiti \XAUAT@value@declare@create}
   \end{center}
