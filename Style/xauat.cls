@@ -292,18 +292,19 @@
 
 \newcommand\makecommittee{
   \cleardoublepage
-  \thispagestyle{empty}
+  \fancyhead[C]{学位论文答辩委员会}
+  \fancyhead[CE]{西安建筑科技大学硕士学位论文} % 在奇数页C显示学校
 
-  \chapter*[学位论文答辩委员会]{}
-  \vskip 20pt
+  \vspace*{0pt}
+  
   \begin{center}
-      {\zihao{2}\heiti 硕士学位论文答辩委员会}
+      {\zihao{-1}\heiti 硕士学位论文答辩委员会}
   \end{center}
 
   \vskip 30pt
 
   \begin{center}
-    {\zihao{3}\heiti \XAUAT@value@title}
+    {\zihao{-2}\heiti \XAUAT@value@title}
   \end{center}
 
   \vskip 15pt
@@ -388,7 +389,12 @@
 %%
 \newcommand\makedeclaration{%
   \cleardoublepage
-  \chapter*[声明]{}
+  \fancyhead{}
+  \fancyhead[C]{声明}
+  \fancyhead[CE]{西安建筑科技大学硕士学位论文} % 在奇数页C显示学校
+  
+  \vspace*{0pt}
+
   \begin{center}
       {\zihao{3}\heiti \XAUAT@value@declare@create}
   \end{center}
