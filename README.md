@@ -124,6 +124,8 @@ XeLaTeX -> BibLaTeX -> XeLaTeX -> XeLaTeX
 	此次更新完成了所有页面，后续只有小修补
 20. 2025-03-16, 22:40
 	去掉了目录中的声明与委员会
+21. 2025-03-17, 10:00
+	修复了声明页与委员会页的 bug
 
 
 
@@ -149,4 +151,3 @@ XeLaTeX -> BibLaTeX -> XeLaTeX -> XeLaTeX
 ## 欢迎大家 Star，有能力的大佬们提 PR
 
 有问题给私我反馈，拴Q。
-
