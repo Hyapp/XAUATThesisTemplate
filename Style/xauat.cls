@@ -294,8 +294,6 @@
   \cleardoublepage
   \fancyhead[C]{学位论文答辩委员会}
   \fancyhead[CE]{西安建筑科技大学硕士学位论文} % 在奇数页C显示学校
-
-  \vspace*{0pt}
   
   \begin{center}
       {\zihao{-1}\heiti 硕士学位论文答辩委员会}
@@ -392,8 +390,6 @@
   \fancyhead{}
   \fancyhead[C]{声明}
   \fancyhead[CE]{西安建筑科技大学硕士学位论文} % 在奇数页C显示学校
-  
-  \vspace*{0pt}
 
   \begin{center}
       {\zihao{3}\heiti \XAUAT@value@declare@create}
@@ -427,13 +423,18 @@
 %%
 %% define chinese abstract
 \newenvironment{abstract}
-{\chapter[\XAUAT@label@abstract]{
-\zihao{-2}\heiti \XAUAT@value@title 
-\vskip -12pt
-\makebox[1em][r]{\zihao{-4}{\kaishu\XAUAT@label@degreeType}}\makebox[1em][s]{\zihao{-4}{\kaishu\XAUAT@value@degreeType}}
-\vskip -12pt
-\makebox[1em][r]{\zihao{-4}{\kaishu\XAUAT@label@majorType}}\makebox[1em][s]{\zihao{-4}{\kaishu\XAUAT@value@majorType}}\\
-{\zihao{3}\textbf{\heiti \XAUAT@label@abstract}}}}
+{
+  \chapter[\XAUAT@label@abstract]{
+    \vskip -0.9em
+    \zihao{-2}\heiti \XAUAT@value@title 
+    \vskip -12pt
+    \makebox[1em][r]{\zihao{-4}{\kaishu\XAUAT@label@degreeType}}\makebox[1em][s]{\zihao{-4}{\kaishu\XAUAT@value@degreeType}}
+    \vskip -12pt
+    \makebox[1em][r]{\zihao{-4}{\kaishu\XAUAT@label@majorType}}\makebox[1em][s]{\zihao{-4}{\kaishu\XAUAT@value@majorType}}\\
+    {\zihao{3}\textbf{\heiti \XAUAT@label@abstract}}
+  }
+}
+
 
   {}
 %% define chinese keywords
@@ -443,13 +444,17 @@
 
 %% define engish abstract
 \newenvironment{englishabstract}
-{\chapter[{\bfseries \XAUAT@label@englishabstract}]{
-\zihao{-2}\textbf{\heiti \XAUAT@value@englishtitle}
-\vskip -12pt
-\makebox[2em][r]{\zihao{-4}{Type of Degree:\quad}}\makebox[1em][s]{\zihao{-4}{\textnormal{\XAUAT@value@englishDegreeType}}}
-\vskip -12pt
-\makebox[2em][r]{\zihao{-4}{\kaishu{Speciality:\quad}}}\makebox[1em][s]{\zihao{-4}{\textnormal{\XAUAT@value@englishmajor}}}\\\vskip 5pt
-{\zihao{-3}\textbf{\heiti \XAUAT@label@englishabstract}}}}
+{
+  \chapter[{\bfseries \XAUAT@label@englishabstract}]{
+    \vskip -0.9em
+    \zihao{-2}\textbf{\heiti \XAUAT@value@englishtitle}
+    \vskip -12pt
+    \makebox[2em][r]{\zihao{-4}{Type of Degree:\quad}}\makebox[1em][s]{\zihao{-4}{\textnormal{\XAUAT@value@englishDegreeType}}}
+    \vskip -12pt
+    \makebox[2em][r]{\zihao{-4}{\kaishu{Speciality:\quad}}}\makebox[1em][s]{\zihao{-4}{\textnormal{\XAUAT@value@englishmajor}}}\\\vskip 5pt
+    {\zihao{-3}\textbf{\heiti \XAUAT@label@englishabstract}}
+  }
+}
 
 %% define engish keywords
 \newcommand\englishkeywords[1]{%
