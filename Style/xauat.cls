@@ -293,7 +293,7 @@
 \newcommand\makecommittee{
   \cleardoublepage
   \fancyhead[C]{学位论文答辩委员会}
-  \fancyhead[CE]{西安建筑科技大学硕士学位论文} % 在奇数页C显示学校
+  \fancyhead[CE]{\XAUAT@value@titlemark} % 在奇数页C显示学校
   
   \begin{center}
       {\zihao{-1}\heiti 硕士学位论文答辩委员会}
@@ -389,7 +389,7 @@
   \cleardoublepage
   \fancyhead{}
   \fancyhead[C]{声明}
-  \fancyhead[CE]{西安建筑科技大学硕士学位论文} % 在奇数页C显示学校
+  \fancyhead[CE]{\XAUAT@value@titlemark} % 在奇数页C显示学校
 
   \begin{center}
       {\zihao{3}\heiti \XAUAT@value@declare@create}
