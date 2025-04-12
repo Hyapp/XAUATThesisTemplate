@@ -1,0 +1,65 @@
+\documentclass[doublesided]{Style/xauat}
+\usepackage[super,myhdr,list]{Style/commons}% common settings
+\usepackage{Style/custom}% user defined commands
+
+\captionsetup[table]{singlelinecheck=false}%%%% -------------------------------------------------------------------------------%%%%******************************** Content *****************************************
+
+\begin{document}
+
+%%%%******************************** Frontmatter *************************************
+%% Frontmatter of Title page, Table of contents, Preface chapter.
+
+
+\input{Texs/Frontpages} % title page
+\frontmatter
+\fancyfoot[LE]{\footnotesize \zihao{5}\thepage}% page number
+\fancyfoot[RO]{\footnotesize \zihao{5}\thepage}% page number
+%abstract, dedication
+\pagenumbering{Roman}
+
+\input{Texs/Abstract}
+
+
+\pagestyle{fancy}
+
+\tableofcontents % 目录
+
+\input{Texs/Prematter}%%符号表
+
+%%%%% --------------------------------------------------------------------------------
+%%%%******************************** Mainmatter **************************************
+%% Main topics.
+\mainmatter
+%%% >>> Main Contents%正文
+\input{Texs/Chapter_Introduction.tex}
+\input{Texs/Chapter_Preliminary.tex}
+
+%%% 参考文献
+% 如果想恢复之前的方案，请去掉方式1后面的\input 前的 %, 并且在方式2中的 \bibliography{...} 加上 % 或删去这一行！
+\backmatter
+\intotoc{\bibname}
+
+% ------------------------------------------------------
+% 方式1: 手动写进 Texs/References.tex 文件中
+%\input{Texs/References} % 在 Texs/Referebces.tex 中手写参考文献
+
+% -------------------------------------------------------
+% 方式2: 使用多阶段编译法用 .bib 文件中编译
+% 编译过程为：
+% XeLaTeX -> BibLaTeX -> XeLaTeX -> XeLaTeX
+% Biblio.bib 文件中的条目可以在网站上的引用中选 bib 格式，
+% 复制粘贴到 Biblio文件夹中的Bibliography.bib 中即可。
+\bibliography{Biblio/Bibliography.bib} 
+
+% 引用方式：见 README.pdf
+
+%%% >>> Other contents
+\input{Texs/Achievements} % 科研成果
+\end{document}
+
+
+
+
+
+
+

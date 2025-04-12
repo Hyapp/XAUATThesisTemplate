@@ -139,6 +139,10 @@ XeLaTeX -> BibLaTeX -> XeLaTeX -> XeLaTeX
 	修复盲审的所需更改的页眉问题，但仍然需要改两个地方
 	1. FrontPage.tex
 	2. Abstract.tex
+27. 2025-04-12, 23:25
+	添加了用于盲审的 hide.tex, 按原来 main 的方式编译它，即可得到所需的pdf.
+	只是去除了封面等非必要部分！仍然需要修改各个 tex 中的内容!
+
 
 现有引用参考文献方式见下表:
 
