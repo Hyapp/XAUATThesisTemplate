@@ -196,18 +196,18 @@
 
     \heiti{
     \begin{tabular}{rc}
-    {\XAUAT@label@author} & \XAUATunderline[120pt]{\XAUAT@value@author}
-    \\
-    {\ziju{2}\XAUAT@label@confidential} & \XAUATunderline[120pt]{\XAUAT@value@confidential}
-    \\
-    {\XAUAT@label@school} & \XAUATunderline[120pt]{\XAUAT@value@school}
-    \\
-    {\XAUAT@label@major} & \XAUATunderline[120pt]{\XAUAT@value@major}
-    \\
-    {\XAUAT@label@advisor} & \XAUATunderline[120pt]{\XAUAT@value@advisor}
-    \\
-    {\XAUAT@label@defensedate} & \XAUATunderline[120pt]{\XAUAT@value@defensedate} 
-    \\
+    {\zihao{4}\XAUAT@label@author} & \XAUATunderline[214pt]{\zihao{4}\XAUAT@value@author}
+    \\[4pt]
+    {\zihao{4}\ziju{2}\XAUAT@label@confidential} & \XAUATunderline[214pt]{\zihao{4}\XAUAT@value@confidential}
+    \\[4pt]
+    {\zihao{4}\XAUAT@label@school} & \XAUATunderline[214pt]{\zihao{4}\XAUAT@value@school}
+    \\[4pt]
+    {\zihao{4}\XAUAT@label@major} & \XAUATunderline[214pt]{\zihao{4}\XAUAT@value@major}
+    \\[4pt]
+    {\zihao{4}\XAUAT@label@advisor} & \XAUATunderline[214pt]{\zihao{4}\XAUAT@value@advisor}
+    \\[4pt]
+    {\zihao{4}\XAUAT@label@defensedate} & \XAUATunderline[214pt]{\zihao{4}\XAUAT@value@defensedate} 
+    \\[4pt]
     \end{tabular}
     }
     \vskip \stretch{4}
@@ -307,9 +307,11 @@
 
   \vskip 15pt
 
-  \begin{center}
-    {\zihao{3}\textit{（涉密论文以下不填写）}}
-  \end{center}
+  % \begin{center}
+  %   {\zihao{3}\textit{（涉密论文以下不填写）}}
+  % \end{center}
+
+  \vskip 35pt
 
   \vskip 15pt
 
